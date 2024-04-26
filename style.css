@@ -3,6 +3,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.bible-verse {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+}
+
 :root {
     --dark-color: #000;
 }
@@ -814,10 +825,6 @@ body {
     border-left: 2vmin solid var(--c);
     -webkit-mask-image: linear-gradient(to top, transparent 20%, var(--dark-color));
     transform-origin: bottom center;
-}
-.long-g .leaf--0 {
-    left: 2vmin;
-    animation: leaf-ans-1 4s linear infinite;
 }
 .long-g .leaf--1 {
     --w: 5vmin;
