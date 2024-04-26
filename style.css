@@ -10,8 +10,10 @@
     left: 20px;
     color: white;
     text-align: center;
-    font-family: "Dancing Script", cursive;
-    font-size: 40px;
+    font-family: "Tangerine", cursive;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 80px;
 }
 
 :root {
