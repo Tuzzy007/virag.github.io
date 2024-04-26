@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petra</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body class="not-loaded">
     <div class="night"></div>
@@ -125,18 +128,6 @@
           <div class="flower__grass__leaf flower__grass__leaf--7"></div>
           <div class="flower__grass__leaf flower__grass__leaf--8"></div>
           <div class="flower__grass__overlay"></div>
-        </div>
-      </div>
-  
-      <div class="grow-ans" style="--d:2.4s">
-        <div class="flower__g-right flower__g-right--1">
-          <div class="leaf"></div>
-        </div>
-      </div>
-  
-      <div class="grow-ans" style="--d:2.8s">
-        <div class="flower__g-right flower__g-right--2">
-          <div class="leaf"></div>
         </div>
       </div>
   
@@ -304,14 +295,16 @@
         </div>
       </div>
     </div>
-  </body>
+    <div class="bible-verse">
+      <p>I have heard your prayer and seen your tears. I will heal you. <br> 2 Kings 20:5</p>
+  </div>
   <script>
-    onload = () => {
-    const c = setTimeout(() => {
-        document.body.classList.remove("not-loaded");
-        clearTimeout(c);
-    }, 1000);
-    };
-
+      window.onload = () => {
+          const c = setTimeout(() => {
+              document.body.classList.remove("not-loaded");
+              clearTimeout(c);
+          }, 1000);
+      };
   </script>
+</body>
 </html>
