@@ -1012,3 +1012,8 @@ body {
 .settings-content.open {
     display: block;
 }
+
+.toggle-button{
+    background-color: #0d1429;
+    color: white;
+}
