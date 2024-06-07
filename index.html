@@ -298,13 +298,84 @@
     <div class="bible-verse">
       <p>I have heard your prayer and <br> seen your tears. I will heal you. <br> 2 Kings 20:5</p>
   </div>
+  <div class="settings-panel">
+    <button class="toggle-button">Beállítások</button>
+    <div class="settings-content">
+      <div class="color-picker">
+        <label>Virág fenti színe:</label>
+        <input type="color" name="flower-color" id="flower-color">
+        <br>
+        <label>Virág lenti színe:</label>
+        <input type="color" name="flower2-color" id="flower2-color">
+        <br>
+        <label>Levél fenti színe:</label>
+        <input type="color" name="leaf-color" id="leaf-color">
+        <br>
+        <label>Levél lenti színe:</label>
+        <input type="color" name="leaf2-color" id="leaf2-color">
+        <br>
+        <label>Szár fenti színe:</label>
+        <input type="color" name="line-color" id="line-color">
+        <br>
+        <label>Szár lenti színe:</label>
+        <input type="color" name="line2-color" id="line2-color">
+        <br>
+        <label>Virág mögötti árnyék színe:</label>
+        <input type="color" name="shadow-color" id="shadow-color">
+      </div>
+    </div>
+
+</div>
   <script>
-      window.onload = () => {
+        window.onload = () => {
           const c = setTimeout(() => {
               document.body.classList.remove("not-loaded");
               clearTimeout(c);
           }, 1000);
-      };
-  </script>
+        };
+        document.addEventListener('DOMContentLoaded', function() {
+          const toggleButton = document.querySelector('.toggle-button');
+          const settingsContent = document.querySelector('.settings-content');
+
+          toggleButton.addEventListener('click', function() {
+              settingsContent.classList.toggle('open');
+          });
+          const flowerColorPicker = document.getElementById('flower-color');
+          flowerColorPicker.addEventListener('change', (event) => {
+              const newColor = event.target.value;
+              document.documentElement.style.setProperty('--flower-color', newColor);
+          });
+          const flower2ColorPicker = document.getElementById('flower2-color');
+          flower2ColorPicker.addEventListener('change', (event) => {
+              const newColor = event.target.value;
+              document.documentElement.style.setProperty('--flower2-color', newColor);
+          });
+          const leafColorPicker = document.getElementById('leaf-color');
+          leafColorPicker.addEventListener('change', (event) => {
+              const newColor = event.target.value;
+              document.documentElement.style.setProperty('--leaf-color', newColor);
+          });
+          const leaf2ColorPicker = document.getElementById('leaf2-color');
+          leaf2ColorPicker.addEventListener('change', (event) => {
+              const newColor = event.target.value;
+              document.documentElement.style.setProperty('--leaf2-color', newColor);
+          });
+          const lineColorPicker = document.getElementById('line-color');
+          lineColorPicker.addEventListener('change', (event) => {
+              const newColor = event.target.value;
+              document.documentElement.style.setProperty('--line-color', newColor);
+          });
+          const line2ColorPicker = document.getElementById('line2-color');
+          line2ColorPicker.addEventListener('change', (event) => {
+              const newColor = event.target.value;
+              document.documentElement.style.setProperty('--line2-color', newColor);
+          });
+          const shadowColorPicker = document.getElementById('shadow-color');
+          shadowColorPicker.addEventListener('change', (event) => {
+              const newColor = event.target.value;
+              document.documentElement.style.setProperty('--flower-shadow', newColor);
+          });
+        });
+    </script>
 </body>
 </html>
